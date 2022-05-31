@@ -4,7 +4,7 @@ using System.IO;
 using UnityEditor;
 using System;
 
-namespace NK.ScriptsCreator
+namespace NK.ScriptsCreator.NKEditor
 {
     public class NKScripts
     {
