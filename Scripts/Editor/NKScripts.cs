@@ -25,13 +25,13 @@ namespace NK.ScriptsCreator.NKEditor
             new ScriptTemplate { TemplateFile = GetTextAssetFile("DefaultInterface.cs.txt"), DefaultFileName = "NewDefaultInterface.cs" }
         };
 
-        private static TextAsset GetTextAssetFile(string templateFileName)
+        public static TextAsset GetTextAssetFile(string templateFileName, string defaultPath = DEFAULT_PATH)
         {
-            string path = Path.Combine(DEFAULT_PATH, templateFileName);
+            string path = Path.Combine(defaultPath, templateFileName);
             return AssetDatabase.LoadAssetAtPath<TextAsset>(path);
         }
 
-        private static void CreateNewScript(ScriptTemplate template)
+        public static void CreateNewScript(ScriptTemplate template)
         {
             string templatePath = AssetDatabase.GetAssetPath(template.TemplateFile);
 
